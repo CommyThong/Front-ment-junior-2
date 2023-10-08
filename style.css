@@ -1,0 +1,367 @@
+@import url('https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;700&family=Big+Shoulders+Display:wght@600;700&family=Epilogue:wght@500;700&family=Fraunces:opsz,wght@9..144,500;9..144,700&family=Inter:wght@300;700&family=Lexend+Deca:wght@100;400;500&family=Montserrat:wght@500&family=Outfit:wght@300;500&family=Rubik:wght@500&family=Space+Mono:wght@700&display=swap');
+
+*, *::before, *::after {
+    box-sizing: border-box;
+  }
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Space Mono';
+    /* border: 1px solid black; */
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+    display: flex;
+    flex-direction: column;
+    background-color: hsl(185, 41%, 84%);
+}
+
+img, picture, video, canvas, svg {
+    display: block;
+    max-width: 100%;
+}
+
+input, button, textarea, select {
+    font: inherit;
+}
+
+p, h1, h2, h3, h4, h5, h6 {
+    overflow-wrap: break-word;
+}
+
+#root, #__next {
+    isolation: isolate;
+}
+
+button {
+    border: none;
+    cursor: pointer;
+}
+
+h1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5rem;
+    letter-spacing: 10px;
+    padding: 1.7em 0 1.35em 0;
+    margin-left: 0.4em;
+    color: hsla(183, 100%, 15%, 0.834);
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    /* border-radius: 25px; */
+    border-top-right-radius: 25px;
+    border-top-left-radius: 25px;
+    background-color: white;
+    padding-bottom: 2em;
+}
+
+.card-1 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+.bill {
+    display: flex;
+    width: 83%;
+    font-size: 1rem;
+    padding: 2em 0 0.35em 0;
+    color: hsl(186, 14%, 43%);
+}
+
+.bill-div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.38em 1.2em 0.38em 1.2em;
+    width: 83%;
+    border-radius: 5px;
+    background-color: hsl(189, 41%, 97%);
+}
+
+.bill-div img {
+    width: min-content;
+    height: min-content;
+}
+
+.bill-div span {
+    font-size: 1.5rem;
+    color: hsla(183, 100%, 15%, 0.937);
+}
+
+.select-tip {
+    display: flex;
+    width: 83%;
+    font-size: 1rem;
+    padding: 2em 0 0.1em 0;
+    color: hsl(186, 14%, 43%);
+}
+
+.card-1 section {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    width: 83%;
+    padding: 0.35em 0 0.35em 0;
+}
+
+.card-1 section button {
+    display: flex;
+    justify-content: center;
+    min-width: 47.3%;
+    padding: 0.265em 0 0.265em 0;
+    border-radius: 5px;
+    font-size: 1.48rem;
+    margin: 0.35em 0 0.35em 0;
+    background-color: hsl(183, 100%, 15%);
+    color: hsl(189, 41%, 97%);
+}
+
+.custom-button {
+    display: flex;
+    justify-content: flex-end !important;
+    color: hsl(186, 14%, 43%) !important;
+    background-color: hsl(189, 41%, 97%) !important;
+    padding-right: 0.8em !important;
+}
+
+.number-of-ppl {
+    display: flex;
+    width: 83%;
+    font-size: 1rem;
+    padding: 1.1em 0 0.3em 0;
+    color: hsl(186, 14%, 43%);
+}
+
+.number-of-ppl-div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* padding: 1.35em 0 1.35em 0; */
+    padding: 0.38em 1.1em 0.38em 1.1em;
+    width: 83%;
+    border-radius: 5px;
+    background-color: hsl(189, 41%, 97%);
+    color: hsla(183, 100%, 15%, 0.937);
+}
+
+.number-of-ppl-div img {
+    height: min-content;
+    width: min-content;
+}
+
+.number-of-ppl-div span {
+    font-size: 1.5rem;
+}
+
+.card-2 {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 87%;
+    margin-top: 2em;
+    border-radius: 15px;
+    background-color: hsl(183, 100%, 15%);
+}
+
+.tip {
+    width: 42.5%;
+    font-size: 1rem;
+    padding-top: 2.45em;
+    color: hsl(189, 41%, 97%);
+}
+
+.tip span, .total span {
+    font-size: 0.8rem;
+    color:  hsl(184, 14%, 56%);
+}
+
+.tip-div {
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    width: 43.5%;
+    font-size: 2rem;
+    color: hsl(172, 67%, 45%);;
+}
+
+.tip-div span {
+    display: flex;
+    flex-direction: column;
+}
+
+.total {
+    width: 42.5%;
+    font-size: 1rem;
+    padding-top: 1.3em;
+    color: hsl(189, 41%, 97%);
+}
+
+.total-div {
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    width: 43.5%;
+    font-size: 2rem;
+    color: hsl(172, 67%, 45%);;
+}
+
+.card-2 button {
+    width: 86%;
+    border-radius: 5px;
+    font-size: 1.25rem;
+    padding: 0.6em 0 0.3em 0;
+    margin: 1.4em 0 1.15em 0;
+    color: hsl(183, 100%, 15%);
+    background-color: hsl(172, 67%, 45%);
+}
+
+.attribution {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    font-size: 1rem;
+    text-align: center;
+    max-width: 21rem;
+    padding: 1em 0 1em 0;
+    color: hsl(183, 100%, 15%);
+}
+
+.attribution a {
+    color: hsl(183, 100%, 15%);
+    padding-left: 0.5em;
+}
+
+.attribution a:hover {
+    color: hsl(172, 67%, 45%);
+}
+
+@media (min-width: 49em) {
+    h1 {
+        padding: 5.3em 0 3.3em 0;
+    }
+
+    main {
+        max-width: 57.5rem;
+        flex-direction: row;
+        border-radius: 25px;
+    }
+
+    .bill {
+        width: 80%;
+        padding: 2em 0 0.4em 0;
+    }
+
+    .bill-div {
+        width: 80%;
+    }
+
+    .select-tip {
+        width: 80%;
+        padding: 2.5em 0 0em 0;
+    }
+
+    .card-1 section {
+        width: 80%;
+    }
+
+    .card-1 section button {
+        min-width: 0%;
+        width: 31%;
+        margin: 0.35em 0em 0.35em 0em;
+    }
+
+    .number-of-ppl {
+        padding: 1.7em 0 0.4em 0;
+        width: 80%;
+    }
+
+    .number-of-ppl-div {
+        width: 80%;
+    }
+
+    .card-2 {
+        margin-right: 2em;
+    }
+
+    .tip {    
+        width: 40%;
+        padding-top: 3.5em;
+    }
+
+    .tip-div {
+        font-size: 3em;
+        padding: 0.8em 0 0 0;
+        width: 40%;
+        letter-spacing: -1px;
+    }
+
+    .total {
+        padding: 2.6em 0 0 0;
+        width: 40%;
+    }
+
+    .total-div {
+        font-size: 3rem;
+        align-items: flex-start;
+        letter-spacing: -1px;
+        width: 40%;
+        padding: 0.5em 0 0 0;
+    }
+
+    .card-2 button {
+        width: 81%;
+        margin: 6.1em 0 2em 0;
+        padding: 0.5em 0 0.3em 0;
+    }
+
+    .attribution {
+        max-width: 100%;
+        padding-top: 4.5em;
+    }
+
+    .attribution a {
+        padding-right: 1em;
+    }
+}
+
+@media (max-width: 20em) {
+    .custom-button {
+        padding: 0.4em 0.3em 0.4em 0.3em !important;
+        /* margin: 0 !important; */
+    }
+
+    .card-1 section {
+        justify-content: center;
+        gap: 5%;
+    }
+
+    .tip, .tip-div, .total, .total-div {
+        width: 100%;
+        justify-content: center;
+    }
+    .tip, .total {
+        display: flex;
+        justify-content: center;
+        max-width: 80%;
+    }
+
+    .tip span, .total span {
+        padding-left: 1em;
+    }
+}
