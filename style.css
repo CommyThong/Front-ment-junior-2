@@ -7,8 +7,8 @@
 * {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
     font-family: 'Space Mono';
+    -webkit-tap-highlight-color: transparent;
     /* border: 1px solid black; */
 }
 
@@ -54,6 +54,7 @@ h1 {
     padding: 1.7em 0 1.35em 0;
     margin-left: 0.4em;
     color: hsla(183, 100%, 15%, 0.834);
+    cursor: default;
 }
 
 main {
@@ -82,6 +83,7 @@ main {
     font-size: 1rem;
     padding: 2em 0 0.35em 0;
     color: hsl(186, 14%, 43%);
+    cursor: default;
 }
 
 .bill-div {
@@ -110,6 +112,7 @@ main {
     font-size: 1rem;
     padding: 2em 0 0.1em 0;
     color: hsl(186, 14%, 43%);
+    cursor: default;
 }
 
 .card-1 section {
@@ -132,12 +135,40 @@ main {
     color: hsl(189, 41%, 97%);
 }
 
+.card-1 section button:hover {
+    background-color: hsla(172, 60%, 67%, 0.857);
+    color: hsla(183, 100%, 15%, 0.937);
+}
+
 .custom-button {
     display: flex;
-    justify-content: flex-end !important;
+    justify-content: center !important;
     color: hsl(186, 14%, 43%) !important;
     background-color: hsl(189, 41%, 97%) !important;
-    padding-right: 0.8em !important;
+    /* padding-right: 0.8em !important; */
+    padding: 0 !important;
+    border-radius: 5px !important;
+    border: 2px solid hsl(189, 41%, 97%);
+    width: 47.3%;
+    height: 3.08rem;
+    margin-top: 0.34em;
+    outline: none;
+    text-align: center;
+    font-size: 1.48em;
+}
+
+.custom-button:hover {
+    border: 2px solid hsl(172, 44%, 60%);
+}
+
+.custom-button[type=text]:focus {
+    border: 2px solid hsl(172, 44%, 60%);
+}
+
+.custom-button::placeholder {
+    color: hsla(183, 100%, 15%, 0.712);
+    font-size: 1.48rem;
+    padding-left: 25px;
 }
 
 .number-of-ppl {
@@ -146,6 +177,7 @@ main {
     font-size: 1rem;
     padding: 1.1em 0 0.3em 0;
     color: hsl(186, 14%, 43%);
+    cursor: default;
 }
 
 .number-of-ppl-div {
@@ -184,6 +216,7 @@ main {
     font-size: 1rem;
     padding-top: 2.45em;
     color: hsl(189, 41%, 97%);
+    cursor: default;
 }
 
 .tip span, .total span {
@@ -197,7 +230,8 @@ main {
     align-items: flex-end;
     width: 43.5%;
     font-size: 2rem;
-    color: hsl(172, 67%, 45%);;
+    color: hsl(172, 67%, 45%);
+    cursor: default;
 }
 
 .tip-div span {
@@ -210,6 +244,7 @@ main {
     font-size: 1rem;
     padding-top: 1.3em;
     color: hsl(189, 41%, 97%);
+    cursor: default;
 }
 
 .total-div {
@@ -218,7 +253,8 @@ main {
     align-items: flex-end;
     width: 43.5%;
     font-size: 2rem;
-    color: hsl(172, 67%, 45%);;
+    color: hsl(172, 67%, 45%);
+    cursor: default;
 }
 
 .card-2 button {
@@ -229,6 +265,10 @@ main {
     margin: 1.4em 0 1.15em 0;
     color: hsl(183, 100%, 15%);
     background-color: hsl(172, 67%, 45%);
+}
+
+.card-2 button:hover {
+    background-color: hsla(172, 87%, 79%, 0.914);
 }
 
 .attribution {
@@ -254,6 +294,7 @@ main {
 @media (min-width: 49em) {
     h1 {
         padding: 5.3em 0 3.3em 0;
+        /* padding-top: clamp(0.3em, 7svh, 5.3em); */
     }
 
     main {
@@ -284,6 +325,30 @@ main {
         min-width: 0%;
         width: 31%;
         margin: 0.35em 0em 0.35em 0em;
+    }
+
+    .custom-button {
+        padding-left: 0 !important;
+        display: flex;
+        justify-content: center;
+        min-width: 0%;
+        width: 31%;
+        height: 3.08rem;
+        /* padding: 0.265em 0 0.265em 0; */
+        padding: 0;
+        border-radius: 5px;
+        font-size: 1.48rem;
+        /* margin: 0.35em 0 0.35em 0; */
+        margin: 0.29em 0 0 0;
+        background-color: hsl(183, 100%, 15%);
+        color: hsl(189, 41%, 97%);
+        text-align: center;
+    }
+
+    .custom-button::placeholder {
+        color: hsla(183, 100%, 15%, 0.712);
+        /* padding-left: 12px; */
+        padding: 0;
     }
 
     .number-of-ppl {
@@ -349,6 +414,15 @@ main {
     .custom-button {
         padding: 0.4em 0.3em 0.4em 0.3em !important;
         /* margin: 0 !important; */
+        /* text-overflow: ellipsis; */
+        text-wrap: wrap;
+    }
+
+    .custom-button::placeholder {
+        padding: 0;
+        margin: 0;
+        font-size: clamp(0.7em, 8vw, 2.8em);
+        text-wrap: wrap;
     }
 
     .card-1 section {
@@ -368,5 +442,32 @@ main {
 
     .tip span, .total span {
         padding-left: 1em;
+    }
+}
+
+@media (max-width:9em) {
+    html, body {
+        overflow-x: hidden;
+    }
+
+    .card-1 section button {
+        min-width: 3rem;
+    }
+
+    .custom-button {
+        width: 47.3%;
+        max-width: 55%;
+        min-width: 5rem;
+    }
+
+    .tip, .total {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .tip-div, .total-div {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
     }
 }
