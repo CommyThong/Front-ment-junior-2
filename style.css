@@ -113,7 +113,11 @@ main {
     color: transparent;
 }
 
-.bill-div:hover:focus {
+.bill-div:hover {
+    border: 2px solid hsl(172, 44%, 60%);
+}
+
+.bill-div[type=text]:focus {
     border: 2px solid hsl(172, 44%, 60%);
 }
 
@@ -214,7 +218,11 @@ main {
     border: 2px solid hsl(189, 41%, 97%);
 }
 
-.number-of-ppl-div:hover:focus {
+.number-of-ppl-div:hover {
+    border: 2px solid hsl(172, 44%, 60%);
+}
+
+.number-of-ppl-div[type=text]:focus {
     border: 2px solid hsl(172, 44%, 60%);
 }
 
